@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Personen Array</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>PersonenArray</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="firstName">Vorname:</label>
+          <input type="text" class="form-control" id="firstName">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Nachname:</label>
+          <input type="text" class="form-control" id="lastName">
+        </div>
+        <div class="form-group">
+          <label for="birthYear">Geburtsjahr:</label>
+          <input type="number" class="form-control" id="birthYear">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success" onclick="addPerson()">Hinzufügen</button>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <button class="btn btn-primary" onclick="sortByLastName()">Sortieren nach Nachname</button>
+          <button class="btn btn-primary" onclick="sortByAge()">Sortieren nach Alter</button>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-danger" onclick="removeLast()">Letztes Element löschen</button>
+          <button class="btn btn-danger" onclick="removeAll()">Alles löschen</button>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <th>Vorname</th>
+              <th>Nachname</th>
+              <th>Alter</th>
+            </thead>
+            <tbody id="listBody">
+             
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="personenArray.js"></script>
+</body>
+</html>
